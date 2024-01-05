@@ -1,0 +1,33 @@
+연산자
+  1. 산술 연산자 : + - * / % << >>
+  2. 비교 연산자 : > < >= <= == !=
+  3. 논리 연산자 : &7 || ! & | ^ ~
+  4. 대입 연산자 : =
+  5. 기타 : (type)  ?:  instansof
+
+증감 연산자 ++ --
+  전위형(prefix) : 값이 참조되기 전에 증가
+    (ex) j = ++i;
+  후위형(postfix) : 값이 참조된 후 증가
+    (ex) j = i++;
+  ** 식에 두 번 이상 포함된 변수에 증감연산자를 사용하는것은 피해야함
+    (ex) x = x++ - ++x;
+
+문자열 비교
+  두 문자열 비교 시 equals() 메서드 사용
+  (ex) String str = new String("abc");
+       boolean result = str.equals("abc");
+    ** String str = "abc";  -> String은 클래스임에도 new 사용안하고 간단히 사용하게 허용됨.
+       p.112) 한가지 차이점이 있긴한데 9장에 나올예정.?
+  대소문자 구분 없이 비교하고 싶으면 equalsIgnoreCase()를 사용
+
+조건 연산자 ?:
+  조건식 ? 식1 : 식2  // true면 식1, false면 식2 실행
+
+
+
+
+
+연산자 : operator
+피연산자 : operand
+식 : expression
