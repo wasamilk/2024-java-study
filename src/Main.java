@@ -9,7 +9,7 @@ public class Main {
 //        print.testPrint();
 
         TestControlStatement control = new TestControlStatement();
-        control.enhancedFor();
-
+        control.testFor();
+        control.testWhile();
     }
 }
