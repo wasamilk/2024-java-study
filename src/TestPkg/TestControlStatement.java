@@ -1,8 +1,13 @@
 package TestPkg;
 
-public class TestControlStatement {
+public class TestControlStatement extends Test {
+    public void test() {
+        this.testFor();
+        this.testWhile();
+    }
+
     public void testFor() {
-        System.out.println(" --- testFor() --- ");
+        System.out.println("\ntestFor -------------");
 
         int[] arr = {10, 20, 30, 40, 50};
 
@@ -15,20 +20,17 @@ public class TestControlStatement {
         for (int tmp : arr) {
             System.out.print(tmp + "  ");
         }
-
         System.out.println();
     }
 
     public void testWhile() {
-        System.out.println(" --- testWhile() --- ");
+        System.out.println("\ntestWhile -------------");
 
         int i = 0;
         while (i < 10) {
             System.out.println("while " + i);
             i++;
         }
-
         System.out.println();
-
     }
 }

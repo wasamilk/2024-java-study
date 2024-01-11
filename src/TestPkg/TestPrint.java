@@ -2,12 +2,16 @@ package TestPkg;
 
 import java.util.Scanner;
 
-public class TestPrint {
+public class TestPrint extends Test {
 
-    public void testPrint() {
+    public void test() {
+        this.basic();
+    }
+
+    private void basic() {
+        System.out.println("\nbasic -------------");
+
         /* 출력 테스트 */
-        System.out.println(" --- 출력 테스트 --- ");
-
         int num1 = 10;
         System.out.printf("num1 : %d\n", num1);
         System.out.printf("num1 : %d%n", num1); // OS마다 줄바꿈이 다를 수 있으므로 %n 사용이 안전

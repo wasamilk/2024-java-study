@@ -1,3 +1,4 @@
+import TestPkg.TestArray;
 import TestPkg.TestControlStatement;
 import TestPkg.TestPrint;
 
@@ -6,10 +7,13 @@ public class Main {
         System.out.println("Hello world main~~!\n");
 
 //        TestPrint print = new TestPrint();
-//        print.testPrint();
+//        print.test();
 
-        TestControlStatement control = new TestControlStatement();
-        control.testFor();
-        control.testWhile();
+//        TestControlStatement control = new TestControlStatement();
+//        control.test();
+
+        TestArray testArray = new TestArray();
+        testArray.test();
+
     }
 }
