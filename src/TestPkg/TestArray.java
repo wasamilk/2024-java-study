@@ -8,6 +8,8 @@ public class TestArray extends Test {
         this.sumAndAvgByArr();
         this.maxAndMin();
         this.shuffle();
+        this.setRandomValue();
+        this.counting();
     }
 
     /* basic */
@@ -85,10 +87,10 @@ public class TestArray extends Test {
         }
         System.out.println("originArr[] - " + Arrays.toString(numArr));
 
-        for(int j=0; j<100; j++){
-            int index = (int)(Math.random() * 10);
-            int tmp =numArr[0];
-            numArr[0] =numArr[index];
+        for (int j = 0; j < 100; j++) {
+            int index = (int) (Math.random() * 10);
+            int tmp = numArr[0];
+            numArr[0] = numArr[index];
             numArr[index] = tmp;
         }
         System.out.println("suffleArr[] - " + Arrays.toString(numArr));
@@ -96,13 +98,34 @@ public class TestArray extends Test {
 
     /* 임의의 값으로 배열 채우기 */
     private void setRandomValue() {
-    }
+        System.out.println("\nsetRandomValue -------------");
+        int[] code = {-4, -1, 3, 2, 1};
+        int[] randomArr = new int[10];
 
-    /* 정렬하기 */
-    private void sortingArr() {
+        for (int i = 0; i < randomArr.length; i++) {
+            randomArr[i] = code[(int) (Math.random() * code.length)];
+        }
+        System.out.println("suffleArr[] - " + Arrays.toString(randomArr));
     }
 
     /* 빈도수 구하기 */
     private void counting() {
+        System.out.println("\ncounting -------------");
+
+        int[] randomArr = new int[10];
+        int[] countArr = new int[10];
+        for (int i = 0; i < randomArr.length; i++) {
+            randomArr[i] = (int) (Math.random() * randomArr.length);
+        }
+
+        for (int i = 0; i < randomArr.length; i++) {
+            countArr[randomArr[i]]++;
+        }
+
+        System.out.println("randomArr[] - " + Arrays.toString(randomArr));
+
+        for (int i = 0; i < randomArr.length; i++) {
+            System.out.println(i + "의 개수 - " + countArr[i]);
+        }
     }
 }
